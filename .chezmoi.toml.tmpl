@@ -1,8 +1,4 @@
-{{- $email := promptStringOnce . "email" "Email address" -}}
-
-encryption = "gpg"
-[gpg]
-    recipient = {{ $email | quote }}
-
-
-{{ joinPath .chezmoi.sourceDir "identity.toml.gpg" | include | decrypt}} 
+encryption = "age"
+[age]
+    identity = "~/.ssh/id_ed25519"
+    symmetric = true
