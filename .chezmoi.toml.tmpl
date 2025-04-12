@@ -3,3 +3,6 @@
 encryption = "gpg"
 [gpg]
     recipient = {{ $email | quote }}
+
+
+{{ joinPath .chezmoi.sourceDir "identity.toml.gpg" | include | decrypt}} 
