@@ -6,4 +6,5 @@ with pkgs; [
   ripgrep
   fzf
   curl
+  devbox
 ]
